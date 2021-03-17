@@ -1,0 +1,35 @@
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 0;
+}
+body.modal-open {
+    position: fixed;
+    width: 100%;
+}
+body{font-size:.4rem;width:375px;height:100%;min-height:10rem;background-color:#F4F5F9;color:#444;margin:0 auto!important;padding:0}
+dd,dl,dt,li,ol,ul{list-style:none;margin:0;padding:0}
+.clear:after{visibility:hidden;display:block;font-size:0;content:".";clear:both;height:0}
+* html .clear{zoom:1}a{text-decoration:none;outline:0;color:#666}
+a:not(href){cursor:pointer}
+a:visited{color:#444}
+::selection{background:#2566b8;color:#fff}
+i,em{font-style:normal}
+input,textarea{-webkit-appearance:none;border-radius:0;font-size:.22rem;padding:0}
+div,header,footer,nav,section,aside,article,ul,dl,dt,dd,
+li,p,h1,h2,h3,h4,h5,h6,i,b,textarea,button,input,select,
+figure,figcaption{padding:0;margin:0;list-style:none;font-style:normal;text-decoration:none;border:none;font-weight:normal;box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased}
+body:hover,div:hover,span:hover,header:hover,footer:hover,nav:hover,
+section:hover,aside:hover,article:hover,ul:hover,dl:hover,dt:hover,
+dd:hover,li:hover,a:hover,p:hover,
+h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,
+h6:hover,i:hover,b:hover,textarea:hover,button:hover,
+input:hover,select:hover,figure:hover,figcaption:hover{outline:none}
+.elp{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

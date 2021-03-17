@@ -1,0 +1,116 @@
+/**app.wxss**/
+//背景图片
+@mixin bis($url){
+  background:{
+    image:url($url);
+    repeat: no-repeat;
+    size: 100% 100%;
+  }
+}
+//fixed位置
+@mixin fixed($position, $rem ){
+  position:fixed;
+  @if $position == top{
+    top:$rem;
+    left:0;
+    right:0;
+  }
+  @else if $position == bottom{
+    bottom:$rem;
+    left:0;
+    right:0;
+  }
+  @else if $position == left{
+    top:0;
+    bottom:0;
+    left:$rem;
+  }
+  @else if $position == right{
+    top:0;
+    bottom:0;
+    right:$rem;
+  }
+  @else if $position == center{
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+}
+//定位居中
+@mixin center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+//宽and高
+@mixin wh($width,$height){
+  width: $width;
+  height:$height;
+}
+
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+  font: #{$size}/#{$line-height} $family;
+}
+
+//flex
+@mixin flexCenter{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.elp{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.fl{float:left;}
+.fr{float:right;}
+
+//我是有底线的
+.moreLine{
+  @include wh(100%,50px);
+  @include flexCenter;
+  font-size:13px;
+  color:#999;
+  &:before,
+  &:after{
+    display: inline-block;
+    content: '';
+    @include wh(100px,1px);
+    border-top:1px solid #999;
+    margin: 0 8px;
+    color:#999;
+  }
+}
+//vant 折叠面板
+/deep/ //vant 折叠面板
+.custom-class{
+  margin-bottom: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  .van-collapse-item__content{
+    padding:0;
+  }
+  .van-cell:after{
+    border:0;
+  }
+  .van-icon--image{
+    line-height: normal;
+  }
+}
+
+/deep/ .wf-model{
+  .van-field__label{
+    width:8em;
+    .van-icon{
+      margin-left:5px;
+      vertical-align: inherit;
+      position: absolute;
+      top: .27rem;
+    }
+  }
+}
